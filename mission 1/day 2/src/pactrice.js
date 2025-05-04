@@ -24,3 +24,10 @@ value = "100";
 console.log("task 4.2", typeof value);
 value = false;
 console.log("task 4.3", typeof value);
+var magazine1 = {
+    title: "The Great Gatsby",
+    pageCount: 180,
+    price: 15.99,
+    isBangla: "yes"
+};
+console.log("task 4.4", magazine1);

@@ -39,3 +39,19 @@ value = "100";
 console.log("task 4.2", typeof value);
 value = false;
 console.log("task 4.3", typeof value);
+
+interface magazine{
+    title: string;
+    pageCount: number;
+    price: number;
+    isBangla?: boolean | string;
+}
+
+const magazine1: magazine = {
+    title: "The Great Gatsby",
+    pageCount: 180,
+    price: 15.99,
+    isBangla: "yes"
+}
+console.log("task 4.4", magazine1);
+
