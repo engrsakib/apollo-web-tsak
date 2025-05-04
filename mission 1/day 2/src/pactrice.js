@@ -31,3 +31,12 @@ var magazine1 = {
     isBangla: "yes"
 };
 console.log("task 4.4", magazine1);
+// task 5
+var revarseSrting = function (str) {
+    var reversedString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        reversedString += str[i];
+    }
+    return reversedString;
+};
+console.log("task 5", revarseSrting("Hello World"));

@@ -55,3 +55,12 @@ const magazine1: magazine = {
 }
 console.log("task 4.4", magazine1);
 
+// task 5
+const revarseSrting = (str : string): string =>{
+    let reversedString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedString += str[i];
+    }
+    return reversedString;
+}
+console.log("task 5", revarseSrting("Hello World"));
