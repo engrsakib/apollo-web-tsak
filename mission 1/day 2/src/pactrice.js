@@ -101,3 +101,15 @@ var getDisplayName = function (name) {
 };
 var mana;
 console.log("task 10", getDisplayName(mana));
+// Task 11: Unknown Type
+// Task 12: Never Type
+var getDisplayNamea = function (name) {
+    if (typeof name == 'string') {
+        console.log(name);
+    }
+    else {
+        console.log('Anonumus');
+    }
+    throw new Error("This function should never return");
+};
+getDisplayNamea("sakib");

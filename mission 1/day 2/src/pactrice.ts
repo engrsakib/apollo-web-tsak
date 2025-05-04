@@ -153,3 +153,17 @@ const getDisplayName = (name?: string | null | undefined)=>{
 }
 let mana;
 console.log("task 10", getDisplayName(mana));
+
+// Task 11: Unknown Type
+
+
+// Task 12: Never Type
+const getDisplayNamea = (name?: string | null | undefined) : never =>{
+    if(typeof name == 'string'){
+        console.log(name);
+    } else {
+        console.log('Anonumus');
+    }
+    throw new Error("This function should never return");
+}
+getDisplayNamea("sakib");
