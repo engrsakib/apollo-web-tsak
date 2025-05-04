@@ -64,3 +64,13 @@ const revarseSrting = (str : string): string =>{
     return reversedString;
 }
 console.log("task 5", revarseSrting("Hello World"));
+
+// task 6
+let arr : string[] = ["sakib", "arif", "sumaiya", "arman"];
+let arr2 : string[] = [...arr, "kamran"];
+arr2.map((ar : string) => console.log(ar));
+
+let num : number[] = [2, 4, 9, 1, 6, 4, 6];
+
+let num2 : number[] = [...num, num.reduce((acc : number, crr : number): number => acc + crr)];
+console.log("task 6", num, num2);

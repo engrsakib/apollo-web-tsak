@@ -1,3 +1,12 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 //Task 1
 var prac1 = "Hello World, I will complete this course successfully and become a Next level Web Developer!";
 console.log("task 1", prac1);
@@ -40,3 +49,10 @@ var revarseSrting = function (str) {
     return reversedString;
 };
 console.log("task 5", revarseSrting("Hello World"));
+// task 6
+var arr = ["sakib", "arif", "sumaiya", "arman"];
+var arr2 = __spreadArray(__spreadArray([], arr, true), ["kamran"], false);
+arr2.map(function (ar) { return console.log(ar); });
+var num = [2, 4, 9, 1, 6, 4, 6];
+var num2 = __spreadArray(__spreadArray([], num, true), [num.reduce(function (acc, crr) { return acc + crr; })], false);
+console.log("task 6", num, num2);
