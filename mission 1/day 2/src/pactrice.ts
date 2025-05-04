@@ -33,3 +33,9 @@ const student1: student = {
 console.log("task 3", student1);
 
 // task 4
+let value: number | string | boolean = 100;
+console.log("task 4.1", typeof value);
+value = "100";
+console.log("task 4.2", typeof value);
+value = false;
+console.log("task 4.3", typeof value);
