@@ -74,3 +74,82 @@ let num : number[] = [2, 4, 9, 1, 6, 4, 6];
 
 let num2 : number[] = [...num, num.reduce((acc : number, crr : number): number => acc + crr)];
 console.log("task 6", num, num2);
+
+// Task 7: Type Assertion and Narrowing
+
+const conFn = (num: (string | number)): any =>{
+    if(typeof num == 'string'){
+        return num.length;
+    }
+    return num * num;
+}
+
+console.log("task 7 as string", conFn("1500"));
+console.log("task 7 as number", conFn(1500));
+
+// task 8 Intersection Types
+
+type editor = {
+    name: string;
+    phone: number;
+    mail?: string;
+    role: "editor";
+    power:{
+        approvePost: boolean;
+        deletePost: boolean;
+    }
+}
+
+type admin = {
+    name: string;
+    phone: number;
+    mail?: string;
+    role: "editor";
+    power:{
+        approveUser: boolean;
+        deleteEditor: boolean;
+        deleteAdmin: boolean;
+    }
+}
+
+type superAdmin = admin & editor;
+
+const fatema : superAdmin = {
+    name: "Fatema",
+    phone: 1234567890,
+    role: "editor",
+    power: {
+        approvePost: true,
+        deletePost: true,
+        approveUser: true,
+        deleteEditor: true,
+        deleteAdmin: true
+    }
+}
+
+console.log("task 8", fatema);
+
+// task 9 optioanl chaining
+function getEmployeeCity(employee: any): string | undefined {
+    return employee?.address?.city;
+  }
+
+  console.log("task 9", getEmployeeCity({
+    id: 1,
+    name: "Nazmus Sakib",
+    address: {
+      street: "123 Main Street",
+      city: "Gulshan Dhaka",
+      country: "Bangladesh"
+    }
+  }))
+
+//   Task 10: Nullish Coalescing
+const getDisplayName = (name?: string | null | undefined)=>{
+    if(typeof name == 'string'){
+        return name;
+    }
+    return 'Anonumus'
+}
+let mana;
+console.log("task 10", getDisplayName(mana));
