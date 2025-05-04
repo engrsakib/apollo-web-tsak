@@ -9,3 +9,27 @@ const task2 = (name: string, age: number, role: "admin" | "user" | "guest") => {
 console.log("task 2", task2("Md. Nazmus Sakib", 25, "admin"));
 
 // task 3
+type student = {
+    name: string;
+    age: number;
+    marks:{
+        bangla: number | null;
+        english: number | null;
+    }
+    id: number | string;
+    isActive: boolean;
+}
+
+const student1: student = {
+    name: "Md. Nazmus Sakib",
+    age: 25,
+    marks:{
+        bangla: 80,
+        english: 90
+    },
+    id: 12345,
+    isActive: true
+}
+console.log("task 3", student1);
+
+// task 4

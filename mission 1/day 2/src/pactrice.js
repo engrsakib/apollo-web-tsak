@@ -6,3 +6,14 @@ var task2 = function (name, age, role) {
     return "Hello ".concat(name, ", you are ").concat(age, " years old and your role is ").concat(role, ".");
 };
 console.log("task 2", task2("Md. Nazmus Sakib", 25, "admin"));
+var student1 = {
+    name: "Md. Nazmus Sakib",
+    age: 25,
+    marks: {
+        bangla: 80,
+        english: 90
+    },
+    id: 12345,
+    isActive: true
+};
+console.log("task 3", student1);
