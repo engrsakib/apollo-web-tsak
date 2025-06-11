@@ -1,7 +1,7 @@
-const a = 5;
-const b = 10;
+const sum = (a, b, c = 0)=>{
+    return a + b + c;
+}
 
 module.exports = {
-  a,
-  b // Exporting variables a and b
+  sum // Exporting variables a and b
 };

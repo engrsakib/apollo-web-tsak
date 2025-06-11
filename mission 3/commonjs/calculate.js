@@ -1,3 +1,3 @@
-const number = require('./varialbe');
+const {sum} = require('./varialbe');
 
-  return number.a * number.b;
+  console.log(sum(15, 20, 15))
