@@ -15,6 +15,11 @@ class EmailSender {
         console.log(`Sending email: ${message}`);
     }
 }
+class NotificationSender {
+    send(message) {
+        console.log(`Sending notification: ${message}`);
+    }
+}
 
 // SmsSender ক্লাস
 class SmsSender {
@@ -26,9 +31,14 @@ class SmsSender {
 // ব্যবহার:
 const emailSender = new EmailSender();
 const smsSender = new SmsSender();
+const notificationSender = new NotificationSender();
 
 const emailMessage = new MessageSender(emailSender);
 emailMessage.sendMessage("Hello via Email!");
+emailMessage.sendMessage("Another message!");
 
 const smsMessage = new MessageSender(smsSender);
 smsMessage.sendMessage("Hello via SMS!");
+
+const notificationMessage = new MessageSender(notificationSender);
+notificationMessage.sendMessage("Hello via Notification!");
