@@ -3,10 +3,10 @@ const app: Application = express();
 app.use(express.json());
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('sakib, World!');
+  res.status(200).send('sakib, World!');
 });
 app.get('/office', (req: Request, res: Response) => {
-  res.send('BD, World!');
+  res.status(200).send('BD, World!');
 });
 
 
